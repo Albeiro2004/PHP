@@ -3,13 +3,20 @@
   "builds": [
     {
       "src": "*.php",
-      "use": "@vercel-community/php"
+      "use": "@vercel-community/php",
+      "config": {
+        "maxDuration": 10
+      }
     }
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "/api_productos.php?path=$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/api_productos.php"
+      "dest": "/index.php"
     }
   ]
 }
