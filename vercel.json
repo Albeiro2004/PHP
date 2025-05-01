@@ -1,15 +1,15 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "*.php",
-        "use": "@vercel/php"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/api_productos.php"
-      }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "*.php",
+      "use": "@vercel-community/php"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api_productos.php"
+    }
+  ]
+}
